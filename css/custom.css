@@ -34,8 +34,8 @@ hr:before {
     -ms-transition: all .2s ease-out;
     transition: all .2s ease-out;
     /* 若要使用风车效果，请去掉下面的注释 */
-    /* content: '\f863'; 
-    animation: avatar_turn_around 1s linear infinite; */
+    content: '\f863'; 
+    animation: avatar_turn_around 1s linear infinite;
 }
 #article-container h1 {
     padding-left: 1.4rem
@@ -147,3 +147,142 @@ hr:before {
     padding-left: 1.2rem
 }
 /* 修改标题样式  结束 */
+
+/* 侧边栏 公众号 */
+[data-theme='light'] #aside-content .card-widget#card-wechat {
+    background: #49b1f5 !important;
+}
+
+#aside-content .card-widget#card-wechat {
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    cursor: pointer !important;
+    border: none;
+    height: 110px;
+}
+
+/* 如果你设置了aside 的 mobile 为 false，记得放开下面这段注释；
+   如果你设置了aside 的 mobile 为 true ，不需要改动。 */
+
+/* @media screen and (max-width: 768px) {
+    #aside-content .card-widget#card-wechat {
+        display: none !important;
+    }
+} */
+
+@media screen and (min-width: 1300px) {
+    #aside-content .card-widget {
+        margin-top: 1rem;
+    }
+}
+
+#flip-wrapper {
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    position: relative;
+    width: 235px;
+    height: 110px;
+    z-index: 1;
+}
+
+#flip-wrapper:hover #flip-content {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#flip-content {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: cubic-bezier(0, 0, 0, 1.29) 0.3s;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* background: url(https://github.com/Anke-An/my-images/blob/master/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png?raw=true) center center no-repeat; */
+    background-size: 100%;
+}
+
+.back.face {
+    display: block;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    /* background: url(https://github.com/Anke-An/my-images/blob/master/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81-%E6%A0%87%E5%87%86%E8%89%B2%E7%89%88.png?raw=true) center center no-repeat; */
+    background-size: 100%;
+}
+
+/* 公众号 End */
+
+
+/* Twikoo 评论样式 */
+
+.tk-input .el-textarea__inner {
+    min-height: 120px !important;
+}
+
+#twikoo .OwO-body {
+    max-width: 100% !important;
+}
+
+#twikoo .OwO .OwO-body .OwO-items:nth-child(1),
+#twikoo .OwO .OwO-body .OwO-items:nth-child(4) {
+    max-height: 360px !important;
+}
+
+#twikoo .OwO-items li[title|=menhera] img {
+    width: 100% !important;
+    margin: 5px 10px;
+}
+
+.tk-comment .tk-owo-emotion[alt*=menhera] {
+    width: 300px !important;
+}
+
+.tk-comment .vemoji[alt|=menhera],
+.tk-comment .tk-owo-emotion[alt*=menhera] {
+    max-width: 300px !important;
+    max-height: 300px !important;
+    margin: 8px 1px;
+    display: block !important;
+}
+
+@media screen and (max-width: 768px) {
+    .tk-comment .vemoji[alt|=menhera], .tk-comment .tk-owo-emotion[alt*=menhera] {
+        max-width: calc(100% - 30px) !important;
+        max-height: calc(100% - 30px) !important;
+    }
+    .OwO .OwO-body .OwO-items-image .OwO-item[title*=menhera] {
+        max-width: calc(50% - 10px);
+        box-sizing: border-box;
+    }
+    
+}
+/* Twikoo 评论样式 End */
+
+
+
+/* 鼠标样式 斜眼笑 */
+/* body {
+    cursor: url(https://bu.dusays.com/2022/05/17/6283c365d20dd.png), auto;
+}
+
+.hide-block>.hide-button.open,
+.hide-inline>.hide-button.open {
+    display: block
+}
+
+a,
+button,
+img {
+    cursor: url(https://bu.dusays.com/2022/05/17/6283c376afcfc.png), auto
+} */
+/* 鼠标样式 斜眼笑 End */
